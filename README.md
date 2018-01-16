@@ -4,7 +4,7 @@ My collection of C++ files.
 
 ## How to compile.
 
-**Please compile against [G++] (https://gcc.gnu.org/)! Clang++ is not currently tested, sorry.**
+**Please compile against [G++](https://gcc.gnu.org/)! [Clang++](https://clang.llvm.org/) is not currently tested, sorry.**
 
 `g++ filename.cpp -o executable.out`
 
