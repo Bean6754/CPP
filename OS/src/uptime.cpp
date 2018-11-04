@@ -12,6 +12,16 @@ int main(void)
 	std::ifstream uptimef;
 	uptimef.open("/proc/uptime");
 
+	if (uptimef.is_open())
+	{
+		// Continue.
+	}
+	else
+	{
+		std::cout << "Error 1: Cannot access '/proc/uptime'." << std::endl; 
+		return 1; // Exit with failure.
+	}
+
 	// Get raw uptime data, is in seconds.
 	float uptime_raw;
 	int uptime_seconds;
@@ -19,7 +29,7 @@ int main(void)
 	uptimef >> uptime_seconds;
 
 	uptimef.close();
-	
+
 	int uptime_minutes, uptime_hours, uptime_days;
 
 	// Maths. From GNU the coreutils, src/uptime.c
