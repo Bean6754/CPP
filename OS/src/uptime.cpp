@@ -19,8 +19,7 @@ int main(void)
 	uptimef >> uptime_seconds;
 
 	uptimef.close();
-
-	// Raw uptime data is in seconds, divide it by sixty to convert it to minutes.
+	
 	int uptime_minutes, uptime_hours, uptime_days;
 
 	// Maths. From GNU the coreutils, src/uptime.c
